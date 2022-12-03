@@ -44,17 +44,9 @@ public class RockPaperScissors {
 
     public static GameOption getGameOptionForOutcome(GameOption g1, String outcome) {
         if (!Objects.equals(outcome, "Y")) {
-            switch (outcome) {
-                case "X":
-                    if (g1 == GameOption.ROCK) return GameOption.SCISSORS;
-                    if (g1 == GameOption.PAPER) return GameOption.ROCK;
-                    if (g1 == GameOption.SCISSORS) return GameOption.PAPER;
-                    break;
-                case "Z":
-                    if (g1 == GameOption.ROCK) return GameOption.PAPER;
-                    if (g1 == GameOption.PAPER) return GameOption.SCISSORS;
-                    if (g1 == GameOption.SCISSORS) return GameOption.ROCK;
-            }
+            if (g1 == GameOption.ROCK) return outcome.equals("X") ? GameOption.SCISSORS : GameOption.PAPER;
+            if (g1 == GameOption.PAPER) return outcome.equals("X") ? GameOption.ROCK : GameOption.SCISSORS;
+            if (g1 == GameOption.SCISSORS) return outcome.equals("X") ? GameOption.PAPER : GameOption.ROCK;
         }
 
         return g1;
