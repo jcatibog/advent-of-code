@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class RockPaperScissors {
-    public static final String fileName = "y2022/day2/input.txt";
+    public static final String fileName = "y2022/day2.input.txt";
 
     public enum GameOption {
         ROCK,

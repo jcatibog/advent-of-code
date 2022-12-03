@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class CalorieCounting {
-    public static final String fileName = "y2022/day1/input.txt";
+    public static final String fileName = "y2022/day1.input.txt";
     public static void main(String[] args) {
         try {
             File file = FileUtility.getFileFromResource(fileName);
